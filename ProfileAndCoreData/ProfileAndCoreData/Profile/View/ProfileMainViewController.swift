@@ -9,9 +9,9 @@ import UIKit
 
 class ProfileMainViewController: UIViewController {
     @IBAction func didTappedProfileDesignButton(_ sender: Any) {
-        if let navigationController = storyboard?.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController {
-            navigationController.modalPresentationStyle = .fullScreen
-            present(navigationController, animated: true, completion: nil)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileDesignViewController") as? ProfileDesignViewController {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
         }
     }
     
