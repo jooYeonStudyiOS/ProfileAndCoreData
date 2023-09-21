@@ -118,7 +118,7 @@
                                     <outlet property="postLabel" destination="W7Y-cn-QJh" id="jnL-YC-5Mh"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-45-Ltu">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-45-Ltu" customClass="UserInfoView" customModule="ProfileAndCoreData" customModuleProvider="target">
                                 <rect key="frame" x="5" y="206" width="382" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -131,6 +131,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="userInfoLabel" destination="lCl-Yn-0ma" id="trx-ui-DbE"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-CE-iPq">
                                 <rect key="frame" x="5" y="299" width="382" height="128"/>
@@ -203,6 +206,7 @@
                     <connections>
                         <outlet property="menuButton" destination="uST-bA-6te" id="xVj-Gs-I6H"/>
                         <outlet property="userFollowInfoView" destination="al4-RX-Gw3" id="CGG-Eu-IkK"/>
+                        <outlet property="userInfoView" destination="EQj-45-Ltu" id="KGA-yC-2Xb"/>
                         <outlet property="userNameLabel" destination="xw5-OU-Mao" id="UsS-YX-8wF"/>
                         <outlet property="userPicImageView" destination="oRa-ct-EjA" id="ACZ-gz-nyx"/>
                     </connections>

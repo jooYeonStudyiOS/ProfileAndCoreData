@@ -13,8 +13,12 @@ class ProfileDesignViewController: UIViewController {
     struct Constraint {
         static let top10 = 10
         static let top14 = 14
+        
+        static let trailing15 = -15
         static let trailing16 = -16
+        
         static let leading14 = 14
+        static let leading15 = 15
     }
     
     @IBOutlet weak var userNameLabel: UILabel!
@@ -22,6 +26,8 @@ class ProfileDesignViewController: UIViewController {
     @IBOutlet weak var userPicImageView: UIImageView!
 
     @IBOutlet weak var userFollowInfoView: UserFollowInfoView!
+    @IBOutlet weak var userInfoView: UserInfoView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +41,8 @@ class ProfileDesignViewController: UIViewController {
         setupUserPic()
         
         setupFollowInfo()
+        
+        setupUserInfo()
     }
     
     func setupUserName() {
@@ -72,6 +80,16 @@ class ProfileDesignViewController: UIViewController {
             $0.top.equalTo(userNameLabel.snp.bottom).offset(37)
             $0.leading.equalTo(userPicImageView.snp.trailing).offset(41)
             $0.trailing.equalToSuperview().offset(-28)
+        }
+    }
+    
+    func setupUserInfo() {
+        userInfoView.setupUI()
+        
+        userInfoView.snp.makeConstraints {
+            $0.top.equalTo(userPicImageView.snp.bottom).offset(Constraint.top14)
+            $0.leading.equalToSuperview().offset(Constraint.leading15)
+            $0.trailing.equalToSuperview().offset(Constraint.trailing15)
         }
     }
 }
