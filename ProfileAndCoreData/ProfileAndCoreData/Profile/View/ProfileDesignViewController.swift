@@ -9,10 +9,12 @@ import UIKit
 import SnapKit
 
 class ProfileDesignViewController: UIViewController {
-
+    
     struct Constraint {
         static let top10 = 10
         static let top14 = 14
+        
+        static let bottom10 = -10
         
         static let trailing15 = -15
         static let trailing16 = -16
@@ -24,12 +26,10 @@ class ProfileDesignViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var userPicImageView: UIImageView!
-
     @IBOutlet weak var userFollowInfoView: UserFollowInfoView!
     @IBOutlet weak var userInfoView: UserInfoView!
-    
     @IBOutlet weak var middleBarView: MiddleBarView!
-    
+    @IBOutlet weak var navGalleryView: NavGalleryView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,10 @@ class ProfileDesignViewController: UIViewController {
         setupUserName()
         setupMenuButton()
         setupUserPic()
-        
         setupFollowInfo()
-        
         setupUserInfo()
-        
         setupMiddleBar()
+        setupNavGallery()
     }
     
     func setupUserName() {
@@ -105,6 +103,15 @@ class ProfileDesignViewController: UIViewController {
             $0.top.equalTo(userInfoView.snp.bottom).offset(11)
             $0.leading.equalToSuperview().offset(Constraint.leading15)
             $0.trailing.equalToSuperview().offset(Constraint.trailing15)
+        }
+    }
+
+    func setupNavGallery() {
+        navGalleryView.setupUI()
+        
+        navGalleryView.snp.makeConstraints {
+            $0.top.equalTo(middleBarView.snp.bottom).offset(Constraint.top10)
+            $0.leading.trailing.equalToSuperview()
         }
     }
 }

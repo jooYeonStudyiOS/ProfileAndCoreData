@@ -165,7 +165,7 @@
                                     <outlet property="moreButton" destination="2Lb-Uc-zkL" id="T0y-Ca-zMo"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-6a-qx5">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-6a-qx5" customClass="NavGalleryView" customModule="ProfileAndCoreData" customModuleProvider="target">
                                 <rect key="frame" x="5" y="435" width="377" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -175,6 +175,9 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="gridImageView" destination="rN5-Eb-xvH" id="TXS-hU-d7m"/>
+                                </connections>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-w7-MaZ">
                                 <rect key="frame" x="5" y="528" width="382" height="160"/>
@@ -211,6 +214,7 @@
                     <connections>
                         <outlet property="menuButton" destination="uST-bA-6te" id="xVj-Gs-I6H"/>
                         <outlet property="middleBarView" destination="pCI-CE-iPq" id="Oda-9F-sGL"/>
+                        <outlet property="navGalleryView" destination="4iZ-6a-qx5" id="LVN-GP-dLU"/>
                         <outlet property="userFollowInfoView" destination="al4-RX-Gw3" id="CGG-Eu-IkK"/>
                         <outlet property="userInfoView" destination="EQj-45-Ltu" id="KGA-yC-2Xb"/>
                         <outlet property="userNameLabel" destination="xw5-OU-Mao" id="UsS-YX-8wF"/>
