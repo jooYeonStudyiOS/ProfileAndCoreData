@@ -18,6 +18,7 @@
 		0A027B582ABC1CF300A0977F /* ProfileMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A027B572ABC1CF300A0977F /* ProfileMainViewController.swift */; };
 		0A027B5A2ABC1DEC00A0977F /* CoreDataTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A027B592ABC1DEC00A0977F /* CoreDataTest.storyboard */; };
 		0A027B5C2ABC1E0C00A0977F /* CoreDataMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A027B5B2ABC1E0C00A0977F /* CoreDataMainViewController.swift */; };
+		0A027B5E2ABC213E00A0977F /* ProfileDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A027B5D2ABC213E00A0977F /* ProfileDesignViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0A027B572ABC1CF300A0977F /* ProfileMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainViewController.swift; sourceTree = "<group>"; };
 		0A027B592ABC1DEC00A0977F /* CoreDataTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreDataTest.storyboard; sourceTree = "<group>"; };
 		0A027B5B2ABC1E0C00A0977F /* CoreDataMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMainViewController.swift; sourceTree = "<group>"; };
+		0A027B5D2ABC213E00A0977F /* ProfileDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				0A027B552ABC1C2A00A0977F /* Profile.storyboard */,
 				0A027B572ABC1CF300A0977F /* ProfileMainViewController.swift */,
+				0A027B5D2ABC213E00A0977F /* ProfileDesignViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				0A027B3D2ABC19BB00A0977F /* ViewController.swift in Sources */,
 				0A027B392ABC19BB00A0977F /* AppDelegate.swift in Sources */,
 				0A027B582ABC1CF300A0977F /* ProfileMainViewController.swift in Sources */,
+				0A027B5E2ABC213E00A0977F /* ProfileDesignViewController.swift in Sources */,
 				0A027B432ABC19BB00A0977F /* ProfileAndCoreData.xcdatamodeld in Sources */,
 				0A027B5C2ABC1E0C00A0977F /* CoreDataMainViewController.swift in Sources */,
 				0A027B3B2ABC19BB00A0977F /* SceneDelegate.swift in Sources */,
