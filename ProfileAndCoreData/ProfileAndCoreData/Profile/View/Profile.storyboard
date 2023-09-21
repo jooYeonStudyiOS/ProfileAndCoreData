@@ -135,7 +135,7 @@
                                     <outlet property="userInfoLabel" destination="lCl-Yn-0ma" id="trx-ui-DbE"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-CE-iPq">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-CE-iPq" customClass="MiddleBarView" customModule="ProfileAndCoreData" customModuleProvider="target">
                                 <rect key="frame" x="5" y="299" width="382" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -159,6 +159,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="followButton" destination="53I-43-eKc" id="2ub-Vf-Sje"/>
+                                    <outlet property="messageButton" destination="Wza-7E-1UO" id="Ps5-wN-gcB"/>
+                                    <outlet property="moreButton" destination="2Lb-Uc-zkL" id="T0y-Ca-zMo"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-6a-qx5">
                                 <rect key="frame" x="5" y="435" width="377" height="85"/>
@@ -205,6 +210,7 @@
                     <navigationItem key="navigationItem" id="iXr-Ak-Nbd"/>
                     <connections>
                         <outlet property="menuButton" destination="uST-bA-6te" id="xVj-Gs-I6H"/>
+                        <outlet property="middleBarView" destination="pCI-CE-iPq" id="Oda-9F-sGL"/>
                         <outlet property="userFollowInfoView" destination="al4-RX-Gw3" id="CGG-Eu-IkK"/>
                         <outlet property="userInfoView" destination="EQj-45-Ltu" id="KGA-yC-2Xb"/>
                         <outlet property="userNameLabel" destination="xw5-OU-Mao" id="UsS-YX-8wF"/>

@@ -28,6 +28,8 @@ class ProfileDesignViewController: UIViewController {
     @IBOutlet weak var userFollowInfoView: UserFollowInfoView!
     @IBOutlet weak var userInfoView: UserInfoView!
     
+    @IBOutlet weak var middleBarView: MiddleBarView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,8 @@ class ProfileDesignViewController: UIViewController {
         setupFollowInfo()
         
         setupUserInfo()
+        
+        setupMiddleBar()
     }
     
     func setupUserName() {
@@ -89,6 +93,16 @@ class ProfileDesignViewController: UIViewController {
         
         userInfoView.snp.makeConstraints {
             $0.top.equalTo(userPicImageView.snp.bottom).offset(Constraint.top14)
+            $0.leading.equalToSuperview().offset(Constraint.leading15)
+            $0.trailing.equalToSuperview().offset(Constraint.trailing15)
+        }
+    }
+    
+    func setupMiddleBar() {
+        middleBarView.setupUI()
+        
+        middleBarView.snp.makeConstraints {
+            $0.top.equalTo(userInfoView.snp.bottom).offset(11)
             $0.leading.equalToSuperview().offset(Constraint.leading15)
             $0.trailing.equalToSuperview().offset(Constraint.trailing15)
         }

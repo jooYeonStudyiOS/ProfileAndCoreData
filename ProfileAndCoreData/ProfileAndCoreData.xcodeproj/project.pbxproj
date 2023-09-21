@@ -22,6 +22,7 @@
 		0A027B612ABC403000A0977F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A027B602ABC403000A0977F /* SnapKit */; };
 		0A027B642ABC43BB00A0977F /* UserFollowInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A027B632ABC43BB00A0977F /* UserFollowInfoView.swift */; };
 		0A905DDD2ABC4EA5001364D1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DDC2ABC4EA5001364D1 /* UserInfoView.swift */; };
+		0A905DDF2ABC7990001364D1 /* MiddleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DDE2ABC7990001364D1 /* MiddleBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		0A027B5D2ABC213E00A0977F /* ProfileDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignViewController.swift; sourceTree = "<group>"; };
 		0A027B632ABC43BB00A0977F /* UserFollowInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowInfoView.swift; sourceTree = "<group>"; };
 		0A905DDC2ABC4EA5001364D1 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		0A905DDE2ABC7990001364D1 /* MiddleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				0A027B632ABC43BB00A0977F /* UserFollowInfoView.swift */,
 				0A905DDC2ABC4EA5001364D1 /* UserInfoView.swift */,
+				0A905DDE2ABC7990001364D1 /* MiddleBarView.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				0A905DDD2ABC4EA5001364D1 /* UserInfoView.swift in Sources */,
 				0A027B3D2ABC19BB00A0977F /* ViewController.swift in Sources */,
 				0A027B392ABC19BB00A0977F /* AppDelegate.swift in Sources */,
+				0A905DDF2ABC7990001364D1 /* MiddleBarView.swift in Sources */,
 				0A027B582ABC1CF300A0977F /* ProfileMainViewController.swift in Sources */,
 				0A027B5E2ABC213E00A0977F /* ProfileDesignViewController.swift in Sources */,
 				0A027B642ABC43BB00A0977F /* UserFollowInfoView.swift in Sources */,
