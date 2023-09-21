@@ -21,6 +21,8 @@ class ProfileDesignViewController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var userPicImageView: UIImageView!
 
+    @IBOutlet weak var userFollowInfoView: UserFollowInfoView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +33,8 @@ class ProfileDesignViewController: UIViewController {
         setupUserName()
         setupMenuButton()
         setupUserPic()
+        
+        setupFollowInfo()
     }
     
     func setupUserName() {
@@ -58,6 +62,16 @@ class ProfileDesignViewController: UIViewController {
         userPicImageView.snp.makeConstraints {
             $0.top.equalTo(userNameLabel.snp.bottom).offset(Constraint.top14)
             $0.leading.equalToSuperview().offset(Constraint.leading14)
+        }
+    }
+    
+    func setupFollowInfo() {
+        userFollowInfoView.setupUI()
+        
+        userFollowInfoView.snp.makeConstraints {
+            $0.top.equalTo(userNameLabel.snp.bottom).offset(37)
+            $0.leading.equalTo(userPicImageView.snp.trailing).offset(41)
+            $0.trailing.equalToSuperview().offset(-28)
         }
     }
 }

@@ -62,7 +62,7 @@
                                 <rect key="frame" x="5" y="104" width="105" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="al4-RX-Gw3">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="al4-RX-Gw3" customClass="UserFollowInfoView" customModule="ProfileAndCoreData" customModuleProvider="target">
                                 <rect key="frame" x="118" y="102" width="264" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -109,7 +109,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="followerCountLabel" destination="q2E-ph-EMO" id="SDY-Ud-1Qh"/>
+                                    <outlet property="followerLabel" destination="2EE-W8-Q9w" id="7zm-Xs-Kol"/>
+                                    <outlet property="followingCountLabel" destination="ol4-gv-QJt" id="ftn-Z1-Rbr"/>
+                                    <outlet property="followingLabel" destination="QOo-bI-o22" id="3os-Xg-0Qr"/>
+                                    <outlet property="postCountLabel" destination="rvp-Zo-G1A" id="dSA-uH-cw4"/>
+                                    <outlet property="postLabel" destination="W7Y-cn-QJh" id="jnL-YC-5Mh"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQj-45-Ltu">
                                 <rect key="frame" x="5" y="206" width="382" height="91"/>
@@ -195,6 +202,7 @@
                     <navigationItem key="navigationItem" id="iXr-Ak-Nbd"/>
                     <connections>
                         <outlet property="menuButton" destination="uST-bA-6te" id="xVj-Gs-I6H"/>
+                        <outlet property="userFollowInfoView" destination="al4-RX-Gw3" id="CGG-Eu-IkK"/>
                         <outlet property="userNameLabel" destination="xw5-OU-Mao" id="UsS-YX-8wF"/>
                         <outlet property="userPicImageView" destination="oRa-ct-EjA" id="ACZ-gz-nyx"/>
                     </connections>
