@@ -193,6 +193,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iXr-Ak-Nbd"/>
+                    <connections>
+                        <outlet property="menuButton" destination="uST-bA-6te" id="xVj-Gs-I6H"/>
+                        <outlet property="userNameLabel" destination="xw5-OU-Mao" id="UsS-YX-8wF"/>
+                        <outlet property="userPicImageView" destination="oRa-ct-EjA" id="ACZ-gz-nyx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Toy-Xu-q5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
