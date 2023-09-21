@@ -78,6 +78,7 @@ class ProfileDesignViewController: UIViewController {
         
         userFollowInfoView.snp.makeConstraints {
             $0.top.equalTo(userNameLabel.snp.bottom).offset(37)
+            $0.bottom.equalTo(userInfoView.snp.top).offset(-38)
             $0.leading.equalTo(userPicImageView.snp.trailing).offset(41)
             $0.trailing.equalToSuperview().offset(-28)
         }

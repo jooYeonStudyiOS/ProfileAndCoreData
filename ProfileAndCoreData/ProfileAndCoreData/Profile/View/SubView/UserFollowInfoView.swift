@@ -34,12 +34,13 @@ class UserFollowInfoView: UIView {
         postLabel.text = "post"
         
         postCountLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview()
+            $0.centerX.equalTo(postLabel)
+            $0.top.equalToSuperview()
         }
         
         postLabel.snp.makeConstraints {
             $0.top.equalTo(postCountLabel.snp.bottom)
-            $0.centerX.equalTo(postCountLabel)
+            $0.leading.equalToSuperview()
         }
     }
     
@@ -48,12 +49,14 @@ class UserFollowInfoView: UIView {
         followerLabel.text = "follower"
         
         followerCountLabel.snp.makeConstraints {
-            $0.leading.equalTo(postCountLabel.snp.trailing).offset(interval)
+            $0.centerX.equalTo(followerLabel)
+            $0.top.equalToSuperview()
         }
         
         followerLabel.snp.makeConstraints {
             $0.top.equalTo(followerCountLabel.snp.bottom)
-            $0.centerX.equalTo(followerCountLabel)
+            $0.leading.lessThanOrEqualTo(postLabel.snp.trailing).offset(interval)
+            $0.trailing.lessThanOrEqualTo(followingLabel.snp.trailing).offset(-interval)
         }
     }
     
@@ -62,12 +65,13 @@ class UserFollowInfoView: UIView {
         followingLabel.text = "following"
         
         followingCountLabel.snp.makeConstraints {
-            $0.leading.equalTo(followerCountLabel.snp.trailing).offset(interval)
+            $0.centerX.equalTo(followingLabel)
+            $0.top.equalToSuperview()
         }
         
         followingLabel.snp.makeConstraints {
             $0.top.equalTo(followingCountLabel.snp.bottom)
-            $0.centerX.equalTo(followingCountLabel)
+            $0.trailing.equalToSuperview()
         }
     }
 }
