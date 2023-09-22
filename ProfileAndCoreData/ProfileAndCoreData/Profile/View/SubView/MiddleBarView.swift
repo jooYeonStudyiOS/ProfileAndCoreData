@@ -56,8 +56,14 @@ class MiddleBarView: UIView {
     }
     
     func setupMoreButton() {
-        moreButton.setTitle("", for: .normal)
-        moreButton.setImage(UIImage(named: "More"), for: .normal)
+        
+        var buttonConfig = UIButton.Configuration.filled()
+        buttonConfig.title = ""
+        buttonConfig.image = UIImage(named: "More")
+        buttonConfig.contentInsets = .zero
+        buttonConfig.baseBackgroundColor = .white
+        moreButton.configuration = buttonConfig
+    
         
         moreButton.snp.makeConstraints {
             $0.top.equalToSuperview()
