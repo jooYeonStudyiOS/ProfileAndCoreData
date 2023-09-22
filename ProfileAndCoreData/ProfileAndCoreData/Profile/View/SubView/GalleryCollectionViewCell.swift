@@ -12,8 +12,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     func setupUI(image: UIImage) {
         imageView.image = image
+        imageView.frame.size.width = contentView.frame.width
+        imageView.frame.size.height = contentView.frame.height
     }
-
 }
 
 extension ProfileDesignViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

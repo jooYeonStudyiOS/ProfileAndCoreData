@@ -125,7 +125,7 @@ class ProfileDesignViewController: UIViewController {
         
         navGalleryImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(52)
-            $0.bottom.equalTo(galleryCollectionView.snp.top).offset(-12.5)
+            $0.bottom.equalTo(galleryCollectionView.snp.top).offset(-4)
         }
         
         let bottomLine = UIView()
@@ -136,7 +136,7 @@ class ProfileDesignViewController: UIViewController {
         bottomLine.snp.makeConstraints {
             $0.top.equalTo(navGalleryImageView.snp.bottom).offset(2)
             $0.height.equalTo(1)
-            $0.width.equalTo(view.frame.width / 3)
+            $0.width.equalTo(view.frame.width / 3 - 2)
             $0.leading.equalToSuperview()
         }
     }
