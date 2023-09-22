@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileMainViewController: UIViewController {
     @IBAction func didTappedProfileDesignButton(_ sender: Any) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileDesignViewController") as? ProfileDesignViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: false)
         }

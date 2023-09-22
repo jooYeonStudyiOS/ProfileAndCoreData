@@ -203,6 +203,9 @@
                         <viewLayoutGuide key="safeArea" id="Ilt-Aw-L1s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="Profile - Fill" id="VZw-GT-kc9">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="iXr-Ak-Nbd"/>
                     <connections>
                         <outlet property="galleryCollectionView" destination="yaz-w7-MaZ" id="HQc-CQ-Hfg"/>
@@ -217,10 +220,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Toy-Xu-q5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1898.4732824427481" y="4.9295774647887329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k6O-YU-EwU">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="wEk-FR-2jN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PEE-Rx-MLC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e2N-1Q-gBp" kind="relationship" relationship="viewControllers" id="X2G-Pu-KgH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0b-yV-IZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="971.7557251908396" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Profile - Fill" width="22.666666030883789" height="23"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
