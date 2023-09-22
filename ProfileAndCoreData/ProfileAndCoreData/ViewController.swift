@@ -19,11 +19,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTappedGoCoreData(_ sender: Any) {
-        let profileStoryboard = UIStoryboard(name: "CoreDataTest", bundle: nil)
+        let coreDataTestStoryboard = UIStoryboard(name: "CoreDataTest", bundle: nil)
         
-        if let vc = profileStoryboard.instantiateViewController(withIdentifier: "CoreDataMainViewController") as? CoreDataMainViewController {
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: false)
+//        if let vc = profileStoryboard.instantiateViewController(withIdentifier: "CoreDataMainViewController") as? CoreDataMainViewController {
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: false)
+//        }
+        
+        if let navigationController = coreDataTestStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController {
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: false)
         }
     }
     override func viewDidLoad() {
