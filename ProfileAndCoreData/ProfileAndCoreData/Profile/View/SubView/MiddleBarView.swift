@@ -32,6 +32,7 @@ class MiddleBarView: UIView {
         followButton.layer.cornerRadius = 4
         
         followButton.snp.makeConstraints {
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview()
             $0.height.equalToSuperview()
         }
@@ -47,6 +48,7 @@ class MiddleBarView: UIView {
         messageButton.layer.borderColor = UIColor(red: 0.855, green: 0.855, blue: 0.855, alpha: 1).cgColor
         
         messageButton.snp.makeConstraints {
+            $0.top.equalToSuperview()
             $0.leading.equalTo(followButton.snp.trailing).offset(Constraint.interval)
             $0.height.equalToSuperview()
             $0.width.equalTo(followButton.snp.width)
@@ -58,6 +60,7 @@ class MiddleBarView: UIView {
         moreButton.setImage(UIImage(named: "More"), for: .normal)
         
         moreButton.snp.makeConstraints {
+            $0.top.equalToSuperview()
             $0.leading.equalTo(messageButton.snp.trailing).offset(Constraint.interval)
             $0.trailing.equalToSuperview()
             $0.height.equalToSuperview()

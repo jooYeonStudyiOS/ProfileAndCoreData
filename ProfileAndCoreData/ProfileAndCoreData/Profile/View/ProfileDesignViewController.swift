@@ -9,6 +9,14 @@ import UIKit
 import SnapKit
 
 class ProfileDesignViewController: UIViewController {
+    let dummyImage = [UIImage(named: "picture1"),
+                      UIImage(named: "picture2"),
+                      UIImage(named: "picture3"),
+                      UIImage(named: "picture4"),
+                      UIImage(named: "picture5"),
+                      UIImage(named: "picture6"),
+                      UIImage(named: "picture7")
+    ]
     
     struct Constraint {
         static let top10 = 10
@@ -29,10 +37,14 @@ class ProfileDesignViewController: UIViewController {
     @IBOutlet weak var userFollowInfoView: UserFollowInfoView!
     @IBOutlet weak var userInfoView: UserInfoView!
     @IBOutlet weak var middleBarView: MiddleBarView!
-    @IBOutlet weak var navGalleryView: NavGalleryView!
+    @IBOutlet weak var navGalleryImageView: UIImageView!
+    @IBOutlet weak var galleryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        galleryCollectionView.dataSource = self
+        galleryCollectionView.delegate = self
         
         setupUI()
     }
@@ -45,6 +57,7 @@ class ProfileDesignViewController: UIViewController {
         setupUserInfo()
         setupMiddleBar()
         setupNavGallery()
+        setupCollection()
     }
     
     func setupUserName() {
@@ -91,6 +104,7 @@ class ProfileDesignViewController: UIViewController {
         
         userInfoView.snp.makeConstraints {
             $0.top.equalTo(userPicImageView.snp.bottom).offset(Constraint.top14)
+            $0.bottom.equalTo(middleBarView.snp.top).offset(-11)
             $0.leading.equalToSuperview().offset(Constraint.leading15)
             $0.trailing.equalToSuperview().offset(Constraint.trailing15)
         }
@@ -100,18 +114,44 @@ class ProfileDesignViewController: UIViewController {
         middleBarView.setupUI()
         
         middleBarView.snp.makeConstraints {
-            $0.top.equalTo(userInfoView.snp.bottom).offset(11)
+            $0.bottom.equalTo(navGalleryImageView.snp.top).offset(Constraint.bottom10)
             $0.leading.equalToSuperview().offset(Constraint.leading15)
             $0.trailing.equalToSuperview().offset(Constraint.trailing15)
         }
     }
 
     func setupNavGallery() {
-        navGalleryView.setupUI()
+        navGalleryImageView.image = UIImage(named: "Grid")
         
-        navGalleryView.snp.makeConstraints {
-            $0.top.equalTo(middleBarView.snp.bottom).offset(Constraint.top10)
+        navGalleryImageView.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(52)
+            $0.bottom.equalTo(galleryCollectionView.snp.top).offset(-12.5)
+        }
+        
+        let bottomLine = UIView()
+        bottomLine.backgroundColor = .black
+        
+        view.addSubview(bottomLine)
+        
+        bottomLine.snp.makeConstraints {
+            $0.top.equalTo(navGalleryImageView.snp.bottom).offset(2)
+            $0.height.equalTo(1)
+            $0.width.equalTo(view.frame.width / 3)
+            $0.leading.equalToSuperview()
+        }
+    }
+    
+    func setupCollection() {
+        if let flowLayout = galleryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .vertical
+            flowLayout.minimumLineSpacing = 2
+            flowLayout.minimumInteritemSpacing = 2
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+        
+        galleryCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
 }
