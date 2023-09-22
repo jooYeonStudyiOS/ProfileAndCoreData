@@ -27,6 +27,9 @@
 		0A905DE52ABD2040001364D1 /* CoreDataWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DE42ABD2040001364D1 /* CoreDataWriteViewController.swift */; };
 		0A905DE72ABD2063001364D1 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DE62ABD2063001364D1 /* ListCollectionViewCell.swift */; };
 		0A905DE92ABD2142001364D1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DE82ABD2142001364D1 /* CoreDataManager.swift */; };
+		0A905DEF2ABD47C2001364D1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DEE2ABD47C2001364D1 /* UserProfile.swift */; };
+		0A905DF12ABD47D0001364D1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DF02ABD47D0001364D1 /* ProfileViewModel.swift */; };
+		0A905DF32ABD47E1001364D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A905DF22ABD47E1001364D1 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		0A905DE42ABD2040001364D1 /* CoreDataWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWriteViewController.swift; sourceTree = "<group>"; };
 		0A905DE62ABD2063001364D1 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A905DE82ABD2142001364D1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0A905DEE2ABD47C2001364D1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0A905DF02ABD47D0001364D1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0A905DF22ABD47E1001364D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		0A027B522ABC1A5800A0977F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A905DEE2ABD47C2001364D1 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 		0A027B532ABC1A6600A0977F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A905DF02ABD47D0001364D1 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			children = (
 				0A027B622ABC439F00A0977F /* SubView */,
 				0A027B552ABC1C2A00A0977F /* Profile.storyboard */,
+				0A905DF22ABD47E1001364D1 /* ProfileViewController.swift */,
 				0A027B572ABC1CF300A0977F /* ProfileMainViewController.swift */,
 				0A027B5D2ABC213E00A0977F /* ProfileDesignViewController.swift */,
 			);
@@ -248,11 +257,14 @@
 				0A027B3D2ABC19BB00A0977F /* ViewController.swift in Sources */,
 				0A027B392ABC19BB00A0977F /* AppDelegate.swift in Sources */,
 				0A905DDF2ABC7990001364D1 /* MiddleBarView.swift in Sources */,
+				0A905DF12ABD47D0001364D1 /* ProfileViewModel.swift in Sources */,
 				0A027B582ABC1CF300A0977F /* ProfileMainViewController.swift in Sources */,
 				0A027B5E2ABC213E00A0977F /* ProfileDesignViewController.swift in Sources */,
 				0A905DE72ABD2063001364D1 /* ListCollectionViewCell.swift in Sources */,
 				0A027B642ABC43BB00A0977F /* UserFollowInfoView.swift in Sources */,
 				0A027B432ABC19BB00A0977F /* ProfileAndCoreData.xcdatamodeld in Sources */,
+				0A905DF32ABD47E1001364D1 /* ProfileViewController.swift in Sources */,
+				0A905DEF2ABD47C2001364D1 /* UserProfile.swift in Sources */,
 				0A027B5C2ABC1E0C00A0977F /* CoreDataMainViewController.swift in Sources */,
 				0A027B3B2ABC19BB00A0977F /* SceneDelegate.swift in Sources */,
 				0A905DE92ABD2142001364D1 /* CoreDataManager.swift in Sources */,
